@@ -1,4 +1,5 @@
 import { Text, View } from "react-native";
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 import defaultStyles from './styles';
 
@@ -12,6 +13,7 @@ function ChatBar() {
           <Text>
             Back
           </Text>
+          <Icon name={'person'} size={30} />
         </View>
         <View>
           <Text style={style.title}>
