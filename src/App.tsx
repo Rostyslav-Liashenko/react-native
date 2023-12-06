@@ -1,10 +1,10 @@
 import React from 'react';
-import {Text} from 'react-native';
+import Chat from "@app/screens/Chat/Chat";
 
 function App(): React.ReactElement {
   return (
     <>
-      <Text>Test screen</Text>
+      <Chat />
     </>
   );
 }
