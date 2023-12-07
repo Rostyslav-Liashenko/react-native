@@ -1,7 +1,8 @@
 import { Text, View } from "react-native";
-import Icon from 'react-native-vector-icons/MaterialIcons'
 
 import defaultStyles from './styles';
+import BackButton from "@app/components/BackButton/BackButton";
+import IconButton from "@app/components/IconButton/IconButton";
 
 function ChatBar() {
   const style = defaultStyles();
@@ -10,20 +11,22 @@ function ChatBar() {
     <>
       <View style={style.root}>
         <View>
-          <Text>
-            Back
-          </Text>
-          <Icon name={'person'} size={30} />
+          <BackButton
+            iconName={'chevron-left'}
+            label={'back'}
+          />
         </View>
-        <View>
+        <View style={style.mainSection}>
           <Text style={style.title}>
             Instamobile team
           </Text>
         </View>
         <View>
-          <Text>
-            setting
-          </Text>
+          <IconButton
+            name={'settings'}
+            size={30}
+            onPress={() => {}}
+          />
         </View>
       </View>
     </>
