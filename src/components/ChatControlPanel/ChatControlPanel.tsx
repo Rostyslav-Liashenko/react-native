@@ -4,8 +4,16 @@ import ChatInput from "@app/components/ChatInput/ChatInput";
 
 import defaultStyles from './styles';
 
-function ChatControlPanel() {
+interface ChatControlPanelProps {
+  onAddMessage: (text: string) => void
+}
+
+function ChatControlPanel({ onAddMessage }: ChatControlPanelProps) {
   const styles = defaultStyles();
+
+  const handlePressEnter = (text: string): void => {
+    onAddMessage(text);
+  };
 
   return (
     <>
@@ -18,7 +26,7 @@ function ChatControlPanel() {
           />
         </View>
         <View style={styles.inputContainer}>
-          <ChatInput />
+          <ChatInput onPressEnter={handlePressEnter} />
         </View>
         <View>
           <IconButton

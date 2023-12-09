@@ -1,15 +1,28 @@
 import { ScrollView } from "react-native";
 import ChatMessage from "@app/components/ChatMessage/ChatMessage";
 
-function ChatBoard() {
+import defaultStyles from './styles';
+import { Message } from "@app/components/interfaces/Message";
+
+export interface ChatBoardProps {
+  messages: Message[],
+  userId: string,
+}
+
+function ChatBoard({ messages, userId }: ChatBoardProps) {
+  const styles = defaultStyles();
+
   return (
     <>
-        <ScrollView>
-          <ChatMessage id={'1'} text={'some text'} />
-          <ChatMessage id={'1'} text={'some text'} />
-          <ChatMessage id={'1'} text={'some text'} />
-          <ChatMessage id={'1'} text={'some text'} />
-          <ChatMessage id={'1'} text={'some text'} />
+        <ScrollView contentContainerStyle={styles.content}>
+          {messages.map((message) => <ChatMessage
+            key={message.id}
+            id={message.id}
+            text={message.text}
+            from={message.from}
+            sourceReply={message.sourceReply}
+            isMyMessage={userId === message.from.id}
+          />)}
         </ScrollView>
     </>
   )

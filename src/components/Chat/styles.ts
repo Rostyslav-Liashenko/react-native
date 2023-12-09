@@ -1,7 +1,8 @@
-import { StyleSheet, ViewStyle } from "react-native";
+import { StyleSheet, View, ViewStyle } from "react-native";
 
 export type ChatStyle = {
   root: ViewStyle
+  board: ViewStyle
 }
 
 export default (): ChatStyle => {
@@ -9,6 +10,9 @@ export default (): ChatStyle => {
     root: {
       flex: 1,
       gap: 10,
+    },
+    board: {
+      flex: 1,
     }
   })
 }

@@ -5,7 +5,7 @@ import Icon from "react-native-vector-icons/MaterialIcons";
 export interface IconButtonProps {
   name: string;
   size: number;
-  onPress: () => void
+  onPress?: () => void
 }
 
 function IconButton({ name, size, onPress }: IconButtonProps) {
@@ -16,6 +16,7 @@ function IconButton({ name, size, onPress }: IconButtonProps) {
           <Icon
             name={name}
             size={size}
+            color={'#4f7942'}
           />
         </View>
       </TouchableHighlight>

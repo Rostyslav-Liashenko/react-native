@@ -16,7 +16,8 @@ export default (): ChatInputStyle => {
       borderRadius: 20,
     },
     textInput: {
-      fontSize: 20
+      width: '100%',
+      fontSize: 20,
     }
   })
 }
