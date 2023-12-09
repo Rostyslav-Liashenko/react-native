@@ -13,17 +13,17 @@ function ChatControlPanel() {
         <View>
           <IconButton
             name={'photo-camera'}
-            size={20}
+            size={25}
             onPress={() => {}}
           />
         </View>
-        <View>
+        <View style={styles.inputContainer}>
           <ChatInput />
         </View>
         <View>
           <IconButton
             name={'send'}
-            size={20}
+            size={25}
             onPress={() => {}}
           />
         </View>
