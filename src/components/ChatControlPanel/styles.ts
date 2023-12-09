@@ -12,6 +12,9 @@ export default (): ChatControlPanelStyles => {
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
+      borderTopColor: '#808080',
+      borderTopWidth: 1,
+      paddingTop: 10,
     },
     inputContainer: {
       width: '85%',

@@ -18,7 +18,7 @@ function ChatBar() {
         </View>
         <View style={style.mainSection}>
           <Text style={style.title}>
-            Instamobile team
+            Instamobile Team
           </Text>
         </View>
         <View>

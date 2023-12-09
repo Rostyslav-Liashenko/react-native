@@ -3,7 +3,7 @@ import { StyleSheet, TextStyle, ViewStyle } from "react-native";
 export type ChatBarStyle = {
   root: ViewStyle
   mainSection: ViewStyle
-  title: TextStyle
+  title: TextStyle,
 }
 
 export default (): ChatBarStyle => {
@@ -13,8 +13,12 @@ export default (): ChatBarStyle => {
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
+      borderBottomColor: '#808080',
+      borderBottomWidth: 1,
     },
-    mainSection: {},
+    mainSection: {
+      width: '50%',
+    },
     title: {
       fontSize: 18,
       fontWeight: '700',
