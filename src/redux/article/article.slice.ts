@@ -5,12 +5,14 @@ import { fetchPost } from "@app/redux/article/article.thunk";
 interface ArticleState {
   articles: Article[],
   isLoading: boolean,
-  numberPage: number
+  isPending: boolean,
+  numberPage: number,
 }
 
 const initialState: ArticleState = {
   articles: [],
   isLoading: false,
+  isPending: false,
   numberPage: 1,
 }
 
@@ -21,6 +23,7 @@ export const articleSlice = createSlice({
   reducers: {
     increasePage: (state, { payload }: PayloadAction<number>) => {
       state.numberPage = payload;
+      state.isPending = true;
     },
   },
   extraReducers: builder => {
@@ -30,11 +33,14 @@ export const articleSlice = createSlice({
     builder.addCase(fetchPost.fulfilled, (state, action) => {
       state.articles = [...state.articles, ...action.payload];
       state.isLoading = false;
+      state.isPending = false;
     })
     builder.addCase(fetchPost.rejected, state => {
       state.isLoading = false;
+      state.isPending = false;
     })
   }
 });
 
 export const { increasePage } = articleSlice.actions;
+export const reducer = articleSlice.reducer;

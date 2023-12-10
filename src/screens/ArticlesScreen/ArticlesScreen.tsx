@@ -1,7 +1,7 @@
 import { ActivityIndicator, Button, ScrollView, View } from "react-native";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { selectCurrentPage, selectIsLoading, selectPosts } from "@app/redux/article/article.selectors";
+import { selectCurrentPage, selectIsLoading, selectIsPending, selectPosts } from "@app/redux/article/article.selectors";
 import { fetchPost } from "@app/redux/article/article.thunk";
 import { useAppDispatch } from "@app/redux/configureStore";
 
@@ -14,12 +14,15 @@ function ArticlesScreen() {
   const isPostLoading = useSelector(selectIsLoading);
   const articles = useSelector(selectPosts);
   const currentPage = useSelector(selectCurrentPage);
+  const isPending = useSelector(selectIsPending);
 
   const styles = defaultStyles();
 
   useEffect(() => {
+    if (!isPending) return;
+
     dispatch(fetchPost(currentPage));
-  }, [currentPage]);
+  }, [isPending]);
 
   const handlePress = (): void => {
     dispatch(increasePage(currentPage + 1));
