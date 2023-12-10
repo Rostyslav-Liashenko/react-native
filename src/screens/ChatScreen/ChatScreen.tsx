@@ -1,6 +1,6 @@
 import React from 'react';
 import {View} from 'react-native';
-import Chat from "@app/components/Chat/Chat";
+import Chat from "@app/components/Chat/Chat/Chat";
 
 function ChatScreen() {
   return (

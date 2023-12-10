@@ -1,4 +1,4 @@
-import { StyleSheet, View, ViewStyle } from "react-native";
+import { StyleSheet, ViewStyle } from "react-native";
 
 export type ChatStyle = {
   root: ViewStyle

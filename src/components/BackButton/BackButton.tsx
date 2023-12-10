@@ -11,6 +11,7 @@ export interface BackButtonProps {
 
 function BackButton({ iconName, label, onPress }: BackButtonProps) {
   const styles = defaultStyles();
+
   return (
     <>
       <TouchableHighlight onPress={onPress}>

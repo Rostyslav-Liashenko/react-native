@@ -1,6 +1,6 @@
 import { View } from "react-native";
 import IconButton from "@app/components/IconButton/IconButton";
-import ChatInput from "@app/components/ChatInput/ChatInput";
+import ChatInput from "@app/components/Chat/ChatInput/ChatInput";
 
 import defaultStyles from './styles';
 
@@ -22,7 +22,6 @@ function ChatControlPanel({ onAddMessage }: ChatControlPanelProps) {
           <IconButton
             name={'photo-camera'}
             size={25}
-            onPress={() => {}}
           />
         </View>
         <View style={styles.inputContainer}>
@@ -32,7 +31,6 @@ function ChatControlPanel({ onAddMessage }: ChatControlPanelProps) {
           <IconButton
             name={'send'}
             size={25}
-            onPress={() => {}}
           />
         </View>
       </View>

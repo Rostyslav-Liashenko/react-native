@@ -25,7 +25,6 @@ function ChatBar() {
           <IconButton
             name={'settings'}
             size={30}
-            onPress={() => {}}
           />
         </View>
       </View>

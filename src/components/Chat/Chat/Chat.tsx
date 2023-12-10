@@ -1,9 +1,9 @@
 import { View } from "react-native";
 
 import defaultStyles from './styles';
-import ChatBar from "@app/components/ChatBar/ChatBar";
-import ChatBoard from "@app/components/ChatBoard/ChatBoard";
-import ChatControlPanel from "@app/components/ChatControlPanel/ChatControlPanel";
+import ChatBar from "@app/components/Chat/ChatBar/ChatBar";
+import ChatBoard from "@app/components/Chat/ChatBoard/ChatBoard";
+import ChatControlPanel from "@app/components/Chat/ChatControlPanel/ChatControlPanel";
 import { Message } from "@app/components/interfaces/Message";
 import { User } from "@app/components/interfaces/user.";
 import { useState } from "react";

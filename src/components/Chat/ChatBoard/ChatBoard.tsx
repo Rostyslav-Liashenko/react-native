@@ -1,5 +1,5 @@
 import { ScrollView } from "react-native";
-import ChatMessage from "@app/components/ChatMessage/ChatMessage";
+import ChatMessage from "@app/components/Chat/ChatMessage/ChatMessage";
 
 import defaultStyles from './styles';
 import { Message } from "@app/components/interfaces/Message";
