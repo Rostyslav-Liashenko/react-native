@@ -1,11 +1,15 @@
 import 'react-native-gesture-handler';
 import React from 'react';
+import { Provider } from "react-redux";
+import { store } from "@app/redux/configureStore";
 import Navigation from "@app/navigation/Navigation/Navigation";
 
 function App(): React.ReactElement {
   return (
     <>
-      <Navigation />
+      <Provider store={store}>
+        <Navigation />
+      </Provider>
     </>
   );
 }

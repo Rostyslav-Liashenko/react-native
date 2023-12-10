@@ -10,7 +10,7 @@ function ChatAvatar() {
       <View>
         <Image
           style={styles.image}
-          source={require('../../assets/img/mock-photo.jpeg')}
+          source={require('../../../assets/img/mock-photo.jpeg')}
         />
       </View>
     </>

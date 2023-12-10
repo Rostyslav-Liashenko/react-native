@@ -1,5 +1,5 @@
 import { Text, View } from "react-native";
-import ChatAvatar from "@app/components/ChatAvatar/ChatAvatar";
+import ChatAvatar from "@app/components/Chat/ChatAvatar/ChatAvatar";
 
 import defaultStyles from './styles';
 import Icon from "react-native-vector-icons/MaterialIcons";
