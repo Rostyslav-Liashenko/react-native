@@ -1,7 +1,6 @@
 import { View } from "react-native";
 
 import defaultStyles from './styles';
-import ChatBar from "@app/components/Chat/ChatBar/ChatBar";
 import ChatBoard from "@app/components/Chat/ChatBoard/ChatBoard";
 import ChatControlPanel from "@app/components/Chat/ChatControlPanel/ChatControlPanel";
 import { Message } from "@app/components/interfaces/Message";
@@ -48,7 +47,6 @@ function Chat() {
   return (
     <>
       <View style={styles.root}>
-        <ChatBar />
         <View style={styles.board}>
           <ChatBoard messages={messages} userId={'3'} />
         </View>

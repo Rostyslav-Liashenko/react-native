@@ -2,19 +2,19 @@ import { Image, View } from "react-native";
 
 import defaultStyles from './styles';
 
-function ProfilePhoto() {
+function ChatAvatar() {
   const styles = defaultStyles();
 
   return (
     <>
-      <View style={styles.root}>
+      <View>
         <Image
           style={styles.image}
-          source={require('../../../assets/img/my-photo.png')}
+          source={require('../../assets/img/mock-photo.jpeg')}
         />
       </View>
     </>
-  )
+  );
 }
 
-export default ProfilePhoto;
+export default ChatAvatar;

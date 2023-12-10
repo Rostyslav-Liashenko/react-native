@@ -1,11 +1,11 @@
 import { StyleSheet, ViewStyle } from "react-native";
 
-type ProfileScreenStyle = {
+type ProfileScreenStyles = {
   root: ViewStyle,
   textContainers: ViewStyle,
 }
 
-export default (): ProfileScreenStyle => {
+export default (): ProfileScreenStyles => {
   return StyleSheet.create({
     root: {
       flex: 1,

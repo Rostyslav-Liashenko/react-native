@@ -10,6 +10,7 @@ export default (): ChatStyle => {
     root: {
       flex: 1,
       gap: 10,
+      padding: 20,
     },
     board: {
       flex: 1,

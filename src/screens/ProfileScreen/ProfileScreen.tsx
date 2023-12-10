@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import ProfilePhoto from "@app/components/Profile/ProfilePhoto/ProfilePhoto";
+import Avatar from "@app/components/Avatar/Avatar";
 
 import defaultStyles from './styles';
 import ProfileTextContainer, {
@@ -17,10 +17,12 @@ function ProfileScreen() {
     { title: 'Хобі', description: 'Програмування, спорт, вивчати нове' },
   ];
 
+  const source = require('@app/assets/img/my-photo.png')
+
   return (
     <>
       <View style={styles.root}>
-        <ProfilePhoto />
+        <Avatar source={source} size={100} />
         <View style={styles.textContainers}>
           {textContainers.map((textContainer, index) => <ProfileTextContainer
             key={index}

@@ -1,5 +1,5 @@
 import { Text, View } from "react-native";
-import Avatar from "@app/components/Avatar/Avatar";
+import ChatAvatar from "@app/components/ChatAvatar/ChatAvatar";
 
 import defaultStyles from './styles';
 import Icon from "react-native-vector-icons/MaterialIcons";
@@ -22,7 +22,7 @@ function ChatMessage({ id, text, from, sourceReply, isMyMessage }: ChatMessagePr
       <View style={styles.root}>
         <View style={styles.content}>
           <View>
-            <Avatar />
+            <ChatAvatar />
           </View>
           <View style={styles.contentContainer}>
             {sourceReply && <>
